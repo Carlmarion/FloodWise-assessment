@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Explore fascinating planets and astronomical images from NASA's Astronomy Picture of the Day API. Discover the wonders of our universe with stunning space photography.">
+        <meta name="keywords" content="planets, astronomy, NASA, space, universe, astronomy picture of the day, APOD">
+        <meta name="author" content="FloodWise Assessment">
+
+        <title>Planets of the Milky Way - Astronomy Explorer</title>
+        <link rel="icon" type="image/png" href="assets/globe.png">
+        <link href="https://cdn.jsdelivr.net/npm/@fontsource/zalando-sans-expanded@latest/index.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Planets of the Milky Way</h1>
+            <p class="subtitle">Explore the wonders of our universe through NASA's Astronomy Picture of the Day</p>
+        </header>
+
+        <main>
+            <section class="card" aria-labelledby="planets-heading">
+                <h2 id="planets-heading">Astronomical Images</h2>
+                <label for="search-input" class="sr-only">Search astronomical images by title</label>
+                <input type="text" label="Search by title..." placeholder="Search by title..." class="search-input" id="search-input">
+                <div id="planets" role="region" aria-label="Planet cards container"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 FloodWise Assessment. Data provided by <a href="https://api.nasa.gov/" target="_blank" rel="noopener">NASA API</a>.</p>
+            <p>Images courtesy of NASA's Astronomy Picture of the Day.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

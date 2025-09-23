@@ -1,0 +1,290 @@
+/* ========== Reset / Base Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== Typography ========== */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+}
+
+/* ========== Layout ========== */
+header {
+  padding: 55px 20px;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1.5em;
+  font-weight: extra-bold;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  border-bottom: 1px solid #333;
+}
+
+header .subtitle {
+  font-size: 1.1em;
+  color: #ccc;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+main {
+  padding: 20px;
+  min-height: calc(100vh - 200px);
+}
+
+footer {
+  background-color: #000000;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #333;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #4a9eff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 2.5em;
+  font-weight: extra-bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1.5em;
+  font-weight: extra-bold;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* ========== Components ========== */
+.card {
+  background: #000000;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #000000;
+  color: white;
+  border: solid 1px white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.05);
+  background-color: #555;
+}
+
+.toggle-text {
+  background-color: #000000;
+  color: white;
+  border: solid 1px white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.toggle-text:hover {
+  transform: scale(1.05);
+  background-color: #555;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #ffffff;
+}
+.search-input:focus {
+  outline: none;
+  border: 2px solid white;
+}
+
+/* ========== Planet Cards Grid ========== */
+#planets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+/* ========== Loading Animation ========== */
+.loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+  animation: loading 1s infinite;
+  filter: brightness(0) invert(1);
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* ========== Planet Cards ========== */
+.planet-card {
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.planet-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+.planet-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.planet-card h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.2em;
+  flex: 1;
+}
+
+.planet-card .today-badge {
+  background-color: rgb(224, 195, 253);
+  color: rgb(134, 100, 169);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7em;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.planet-card .date {
+  color: #ccc;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.planet-card p {
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.planet-card img {
+  border-radius: 8px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* ========== Responsive Design ========== */
+
+/* Tablet 2 cards per row */
+@media (max-width: 768px) {
+  #planets {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .planet-card {
+    padding: 15px;
+  }
+
+  .planet-card h3 {
+    font-size: 1.1em;
+  }
+}
+
+/* Mobile 1 card per row */
+@media (max-width: 480px) {
+  #planets {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .planet-card {
+    padding: 15px;
+  }
+
+  .planet-card h3 {
+    font-size: 1em;
+  }
+
+  .planet-card p {
+    font-size: 0.9em;
+  }
+
+  .planet-card .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .planet-card .today-badge {
+    font-size: 0.6em;
+    padding: 3px 6px;
+  }
+}
+
+/* ========== Utilities ========== */
+.text-center {
+  text-align: center;
+}
