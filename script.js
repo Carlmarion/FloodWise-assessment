@@ -1,5 +1,5 @@
 // Replace with your own API key obtained from NASA's website
-const API_KEY = "c4GSxP8W9wSQjyfOA8oyeCT19dMudwFf8leiLeGo";
+const API_KEY = "YOUR_API_KEY";
 
 // HELPERS FUNCTIONS
 // organize the date for today first
@@ -90,7 +90,7 @@ const displayPlanets = (planets, isSearchResult = false) => {
     return;
   }
 
-  planetsToShow.forEach((planet, index) => {
+  planetsToShow.forEach((planet) => {
     const planetCard = document.createElement("div");
     planetCard.classList.add("planet-card");
 
